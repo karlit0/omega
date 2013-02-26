@@ -1,0 +1,19 @@
+<h1>Show</h1>
+<ul>Ime kolegija</ul>
+<h2><ul><%=@subject.name%></ul></h2>
+<ul>Ocjena</ul>
+<h2><ul><%=@subject.grade%></ul></h2>
+
+<h2>Comments</h2>
+<% @comments.each do |c| %>
+	<% if c.subject_id==@subject.id %>
+	<ul>
+		<li> <%= c.content %> <%=link_to 'Edit', edit_comment_path(c) %> <%=link_to 'Destroy', c, method: :delete,
+						data: { confirm: 'Sure?' } %> </li>
+	</ul>
+	<% end %>
+<% end %>
+
+<%= link_to 'New Comment', controller: :comments, action: "new" %>
+
+<%= link_to 'Back', subjects_path %>

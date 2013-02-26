@@ -1,0 +1,12 @@
+<title>Nastava</title>
+<h1>Kolegiji</h1>
+<% @subjects.each do |s| %>
+<ul>
+	<li><%=s.name%> - <%=s.grade%>  <%= link_to 'Show', s %>
+		 <%= link_to 'Edit', edit_subject_path(s) %>
+		 <%= link_to 'Destroy', s, method: :delete, data: { confirm: 'Sure?' } %> 
+		</li>
+</ul>
+<% end %>
+
+<%= link_to 'New', new_subject_path %>

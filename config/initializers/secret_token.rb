@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Omega::Application.config.secret_token = '3ba23eba349916704f45ea4d93bc00d2f3b297284e723265b027b4315068f7e29685e86d2a742ac2db9055b9e4cf78e8fb47f0b99316594f165ccd5a8ff665e7'
+NastavaApp::Application.config.secret_token = 'd8d071327163c534a529c206608cb8b7df42bc9986c3e6c8ed8473b40e4c6d63765b2a38cbae722ead0aa9e2b52e81399e278eaaf8b137ff481cbdf0fa44fbbe'

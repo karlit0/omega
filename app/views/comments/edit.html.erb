@@ -1,0 +1,19 @@
+<h1>Editing Comment</h1>
+
+<% if @comment.errors.any? %>
+<ul>
+	<% @comment.errors.full_messages.each do |msg| %>
+		<li> <%= msg %> </li>
+	<% end %>
+</ul>
+<% end %>
+
+<%= form_for(@comment) do |c| %>
+	<%= c.label :content %>
+	<%= c.text_field :content %>
+
+	<%= c.label :subject_id %>
+	<%= c.text_field :subject_id %>
+
+	<%= c.submit "Edit"%>
+<% end %>

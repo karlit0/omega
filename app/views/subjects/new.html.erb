@@ -1,0 +1,19 @@
+<h1>Create new Kolegij</h1>
+
+<% if @subject.errors.any? %>
+<ul>
+	<% @subject.errors.full_messages.each do |msg| %>
+		<li> <%= msg %> </li>
+	<% end %>
+</ul>
+<% end %>
+
+<%= form_for(@subject) do |s| %>
+	<%= s.label :name %>
+	<%= s.text_field :name %>
+
+	<%= s.label :grade %>
+	<%= s.text_field :grade %>
+
+	<%= s.submit "Create"%>
+<% end %>

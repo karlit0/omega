@@ -1,4 +1,10 @@
-Omega::Application.routes.draw do
+NastavaApp::Application.routes.draw do
+
+  resources :subjects
+  resources :comments
+
+  root to: 'subjects#index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

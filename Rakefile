@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Omega::Application.load_tasks
+NastavaApp::Application.load_tasks
