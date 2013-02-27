@@ -21,6 +21,11 @@ class SubjectsController < ApplicationController
   def show
     @subject = Subject.find(params[:id])
     @comments = Comment.all
+    if StoredSubjectId.first.nil?
+      @stored_id = StoredSubjectId.create(stored_id: @subject.id)
+    else
+      @stored_id = StoredSubjectId.first.update_attributes(stored_id: @subject.id)
+    end
   end
 
   def edit
