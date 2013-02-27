@@ -17,6 +17,7 @@ class CommentsController < ApplicationController
 
   def edit
   	@comment = Comment.find(params[:id])
+    @subject = Subject.find_by_id(@comment.subject_id)
   end
 
   def update
